@@ -1,10 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
     background: #333;
     color: #fff;
     line-height: 1.6;
@@ -86,4 +88,65 @@ section#service {
 
 section#contact {
   background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
+}
+
+.contact-form{
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.7);
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(0,0,0,0.13);
+}
+
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+    width: 48%;
+}
+
+.input-fields .input,
+.msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid skyblue;
+    padding: 10px;
+    color: skyblue;
+    width: 100%;
+}
+
+.msg textarea{
+    height: 208px;
+    max-height: 208px;
+    max-width: 100%;
+}
+
+::-webkit-input-placeholder{
+    color: skyblue;
+}
+
+::-moz-input-placeholder{
+    color: skyblue;
+}
+
+::-ms-input-placeholder{
+    color: skyblue;
+}
+
+.btn {
+    background: #39b7dd;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
 }
