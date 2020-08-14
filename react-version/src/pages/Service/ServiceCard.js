@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import { Container } from './styles';
-
 function ServiceCard(props) {
   return (
     <div className="service-card">

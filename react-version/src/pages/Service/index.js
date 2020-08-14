@@ -1,8 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 
-// import { Container } from './styles';
-
 const data = [
 {
   imgUrl: 'https://portaldarmc.com.br/guia-estudante-unicamp/icones/ICONES-site-propaganda-divulgacao-marketing-web-editoracao-eletronica-diagramacao-site-brasilia-df.png',

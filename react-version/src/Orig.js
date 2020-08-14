@@ -1,7 +1,5 @@
 import React from 'react';
 
-// import { Container } from './styles';
-
 function Orig() {
   return (
     <div class="container">
