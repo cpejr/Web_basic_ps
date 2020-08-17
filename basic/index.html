@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
+    <!-- 
+        A tag head vem sempre entre a html e a body, com 
+    o a função de passar informações ao navegador sobre a
+    página, mas essas informações não aparecerão diretamente
+    -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth scroll landing page</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- 
+        Como dito, a head comporta informaçoes sobre os dados
+        da página (metadados), e essa tag meta representa es-
+        se tipo de dado
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o conteúdo para que não tenha que ficar dando zoom dependendo do tamanho da tela-->
+    <title>Capacitação FrontBasic</title> <!-- título da aba da página -->
+    <link rel="stylesheet" href="style.css"> <!-- importando o arquivo css dos nossos reposítórios -->
 </head>
 
 <body>
+    <!-- 
+        É dentro do body que colocaremos as informações que 
+        pretendemos que o usuário veja, como o cabeçalho, textos
+        e imagens
+    -->
     <div class="container">
+        <!-- 
+            a tag div quer dizer literalmente uma divisão da sua 
+            página, para que você possa definir um comportamento
+            que você queira diferente do resto
+        -->
         <nav class="navbar">
+            <!-- 
+                A tag nav serve para definirmos links de navegação
+                dentro da própria página
+            -->
             <ul>
-                <li><a href="#home">Home</a></li>
+            <!-- 
+                essa tag aparece quando queremos fazer uma lista de
+                itens, que nesse caso, serão links para pontos da página,
+                mas podem ser o programador desejar
+             -->
+                <li><!-- li quer dizer "list item", ou seja, é uma tag diretamente vinculada à <ul> -->
+                    <a href="#home">Home</a><!-- Tag a é utilizada para colocar um hiperlink para algum ponto da página ou outra página -->
+                </li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#service">Service</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -20,9 +51,14 @@
         </nav>
 
         <section id="home">
-            <h1>Welcome To My Site</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, facilis corporis quibusdam nihil sint
-                placeat.</p>
+            <!--
+                Como o próprio nome diz, funciona pra dividir uma seção do documento
+                para algum tópico específico, tem um funcionamento muito similar a uma 
+                div, só que com um nome mais específico para conteúdo
+             -->
+            <h1>Welcome To My Site</h1> <!-- tags hx são para títulos, e os números variam, de maneira que, quanto maior o número, menor a letra do título -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, facilis corporis quibusdam nihil sint placeat.</p>
+            <!-- a tag p quer dizer pharagraph, um lugar onde deixará um texto fixo na sua página -->
         </section>
 
         <section id="about">
@@ -57,6 +93,11 @@
             <form class="contact-form">
                 <div class="input-fields">
                     <input type="text" class="input" placeholder="Name">
+                    <!-- 
+                        a tag input define vários types de entrada que
+                        podemos ter do usuário, como textos, datas, horas 
+                        e alguns outros
+                     -->
                     <input type="text" class="input" placeholder="Email">
                     <input type="text" class="input" placeholder="Phone">
                     <input type="text" class="input" placeholder="Subject">
