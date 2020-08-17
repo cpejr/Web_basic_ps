@@ -1,33 +1,34 @@
-*{
+*{ /* o "*" significa que é global o que estiver em seu escopo */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*faz com que padding, border e margin passem a contribuir para o tamanho total do elemento*/
     outline: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background: #333;
-    color: #fff;
-    line-height: 1.6;
-    height: 100vh;
-    overflow: hidden;
+    background: #333; /*Define o que será o fundo*/
+    color: #fff; /*Define a cor das letras*/
+    line-height: 1.6; /*Define o espaçamento entre as linhas de texto*/
+    height: 100vh; /*Define a altura que o conteúdo ocupa na tela. vh é uma unidade de medida interessante pra se utilizar quando queremos pegar a tela toda*/
+    overflow: hidden; /*Esconde a barra de scroll lateral, nos eixos x e y*/
 }
 
 .container{
-    width: 100%;
+    width: 100%; /*Define a largura*/
     height: 100%;
     /* CSS Smooth Scrool */
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    overflow-y: scroll; /*Adicionamos nessa div a opção de barra de rolagem no eixo y*/
+    scroll-behavior: smooth; /*Ao dar scroll, ele não será repentino, terá um efeito de deslize suave*/
+    scroll-snap-type: y mandatory; /*Faz com que o scroll vá diretamente para o elemento que esava na direção de rolagem*/
 }
 
+/* Navbar */
 .navbar{
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: flex;
+    position: fixed; /*Tem sua posição fixada no mesmo lugar da página*/
+    margin-top: 0;
+    z-index: 1; /*o elemento ficará acima de todos os demais elementos, não será tampado*/
+    display: flex;/*maneira de configurar o elemento em questão de maneira mais fácil de se movimentar elementos lá dentro*/
     width: 100%;
     height: 60px;
     background: rgba(0,0,0,0.7);
@@ -35,9 +36,9 @@ body{
 
 .navbar ul{
     display: flex;
-    list-style: none;
+    list-style: none; /*remove a estilização de texto que vem nos itens da lista*/
     width: 100%;
-    justify-content: center;
+    justify-content: center; /*põe o conteúdo do elemento justificado ao centro*/
 }
 
 .navbar ul li{
@@ -46,95 +47,24 @@ body{
 }
 
 .navbar ul li a{
-    text-decoration: none;
-    text-transform: uppercase;
+    text-decoration: none; /*tira a extilização que vem nos links*/
+    text-transform: uppercase; /*transformar todo o texto em maiúsculo*/
     color: #f4f4f4;
 }
-.navbar ul li a:hover{
+.navbar ul li a:hover{ /*a propriedade ":hover" permite mudar a estilização do elemento quando o mouse passar por cima deste*/
     color: skyblue;
 }
 
+/* Padrão das sections */
 section{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*faz com que a direção de distribuição do display flex seja em colunas, não em linhas*/
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
     height: 100%;
-    scroll-snap-align: center;
-}
-
-section #about h1{
-    height: 200px;
-}
-
-@media (min-width:610px){
-    #about p{
-        display: none;
-    }
-}
-
-@media (max-width:610px){
-    #about #aboutimages{
-        display: none;
-    }
-}
-
-#aboutimages{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-}
-
-#aboutimages a{
-    text-decoration: none;
-}
-
-#aboutimages a:hover{
-    cursor: pointer;
-}
-
-#aboutimages img{
-    margin: 0;
-    border: none;
-    background: rgba(0,0,0,0.4);
-    border: 1px solid #ddd;
-    max-width: 100%;
-    max-height: 100%;
-    padding: 10px;
-}
-
-#aboutimages a:hover .desc{
-    display: flex;
-    font-size: 1.2em;
-    padding: 30px;
-    background: #111;
-    filter:alpha(opacity=75);
-    opacity:.75;
-    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";  */
-    color: #fff;
-    position: absolute;
-    bottom: 11px;
-    left: 11px;
-    padding: 2px;
-    margin: 0;
-    width: 150px;
-    border-top: 0px solid #999;
-}
-
-#aboutimages a:hover .desc strong {
-    display: block;
-    margin-bottom: 5px;
-    font-size:1.5em;
-}
-
-.linkimage{
-    padding: 30px;
+    scroll-snap-align: center; /*serve para mostrar para a propriedade scroll-snap-type em qual local ele deve fixar a rolagem*/
 }
 
 section h1{
@@ -145,23 +75,80 @@ section p{
     font-size: 1.5rem;
 }
 
-/* Section Images */
+/* Sections Images */
 section#home {
-  background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;;
+  background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover; /*esses comandos após o link não seixam que a imagem se repita pra completar a página (no-repeat), fique ao centro (center) e cubra toda a página (center/cover)*/
 }
 
 section#about {
-  background: url('https://source.unsplash.com/vEE00Hx5d0Q/1600x900') no-repeat center center/cover;;
+  background: url('https://source.unsplash.com/vEE00Hx5d0Q/1600x900') no-repeat center center/cover;
 }
 
 section#service {
-  background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;;
+  background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
 }
 
 section#contact {
-  background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;;
+  background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;
 }
 
+/* Imagens interativas */
+.images-box {
+    background: rgba(0,0,0,0.7);
+    width: 50%;
+    height: 65vh;
+    border-radius: 10px;
+}
+
+#lrgImg {
+    height: 350px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px; /*nos permite arredondar as bordas do elemento*/
+}
+
+.small-images {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.smllImg {
+    height: 100px;
+    margin: 10px;
+    cursor: pointer; /*muda a forma do cursor ao passar por cima do elemento*/
+    border-radius: 10px;
+    transition: 0.3s; /*Caso exista algum evento no css, esse evento levará 0.3s para ser completado*/
+}
+
+.smllImg:hover {
+    border: 3px solid;
+    border-color:purple;
+    transform: scale(1.5); /* a propriedade transform tem muitas finções, uma delas é alterar o tamanho de um elemento com o comando scale*/
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+/* Serviços */
+.services-box {
+    display: flex;
+    max-width: 1500px; /*define uma largura máxima de um elemento*/
+}
+
+.service {
+    margin: 10px 30px 10px 30px;
+    max-height: 249px;
+    text-align: justify;
+    background: rgba(0,0,0,0.7);;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service:hover{
+    border-bottom: 8px solid purple;
+}
+
+/* Form de contato */
 .contact-form{
     max-width: 550px;
     margin: 0 auto;
@@ -201,7 +188,7 @@ section#contact {
     max-width: 100%;
 }
 
-::-webkit-input-placeholder{
+::-webkit-input-placeholder{  /*alguns navegadores não suportam a sintaxe normal de colocar cor nos placeholders, aí utilizamos esse tipo de notação*/
     color: skyblue;
 }
 

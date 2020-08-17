@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o conteúdo para que não tenha que ficar dando zoom dependendo do tamanho da tela-->
     <title>Capacitação FrontBasic</title> <!-- título da aba da página -->
     <link rel="stylesheet" href="style.css"> <!-- importando o arquivo css dos nossos reposítórios -->
+    <script type="text/javascript" src="scripts.js"></script><!-- importanto arquivo js com as funções -->
 </head>
 
 <body>
@@ -42,11 +43,13 @@
                 mas podem ser o programador desejar
              -->
                 <li><!-- li quer dizer "list item", ou seja, é uma tag diretamente vinculada à <ul> -->
-                    <a href="#home">Home</a><!-- Tag a é utilizada para colocar um hiperlink para algum ponto da página ou outra página -->
+                    <a href="#home">
+                        Home
+                    </a><!-- Tag a é utilizada para colocar um hiperlink para algum ponto da página ou outra página -->
                 </li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#service">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
 
@@ -56,55 +59,64 @@
                 para algum tópico específico, tem um funcionamento muito similar a uma 
                 div, só que com um nome mais específico para conteúdo
              -->
-            <h1>Welcome To My Site</h1> <!-- tags hx são para títulos, e os números variam, de maneira que, quanto maior o número, menor a letra do título -->
+            <h1>Bem vindo à capacitação FrontBasic!</h1> <!-- tags hx são para títulos, e os números variam, de maneira que, quanto maior o número, menor a letra do título -->
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, facilis corporis quibusdam nihil sint placeat.</p>
             <!-- a tag p quer dizer pharagraph, um lugar onde deixará um texto fixo na sua página -->
         </section>
 
         <section id="about">
-            <h1>About</h1>
-            <div id="aboutimages">
-                <a class="linkimage" href="#">
-                    <img src="./images/viruses.jpg" alt="imagem de um virus" />
-                    <span class="desc">
-                        <strong>Viruses</strong>
-                    </span>
-                </a>
-                <a class="linkimage" href="#">
-                    <img src="./images/vehicles.jpg" alt="high levels of carbon release" />
-                    <span class="desc">
-                        <strong>Carbon</strong>
-                    </span>
-                </a>
+            <h1>Sobre</h1>
+            <div class="images-box">
+                <img src="images/vehicles.jpg" alt="Large_image" id="lrgImg">
+                <div class="small-images">
+                    <img src="images/viruses.jpg" alt="Small_image" class="smllImg" onclick="changeImage(this)" id="1">
+                    <img src="images/viruses.jpg" alt="Small_image" class="smllImg" onclick="changeImage(this)" id="2">
+                    <img src="images/viruses.jpg" alt="Small_image" class="smllImg" onclick="changeImage(this)" id="3">
+                    <img src="images/viruses.jpg" alt="Small_image" class="smllImg" onclick="changeImage(this)" id="4">
+                    <img src="images/viruses.jpg" alt="Small_image" class="smllImg" onclick="changeImage(this)" id="5">
+                </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, facilis corporis quibusdam nihil sint
-                placeat.</p>
         </section>
 
         <section id="service">
-            <h1>Service</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, facilis corporis quibusdam nihil sint
-                placeat.</p>
+            <h1>Serviços</h1>
+            <div class="services-box">
+                <div class="service" id="srvc1">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dicta modi, blanditiis molestias, harum adipisci at, nisi obcaecati recusandae iusto eum tempore laudantium vero nam facilis saepe pariatur sit. Repellat.
+                    </p>
+                </div>
+                <div class="service" id="srvc2">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dicta modi, blanditiis molestias, harum adipisci at, nisi obcaecati recusandae iusto eum tempore laudantium vero nam facilis saepe pariatur sit. Repellat.
+                    </p>
+                </div>
+                <div class="service" id="srvc3">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio dicta modi, blanditiis molestias, harum adipisci at, nisi obcaecati recusandae iusto eum tempore laudantium vero nam facilis saepe pariatur sit. Repellat.
+                    </p>
+                </div>
+            </div>
             <!-- Cards das imagens dinâmicas -->
         </section>
 
         <section id="contact">
-            <h1>Contact</h1>
+            <h1>Contato</h1>
             <form class="contact-form">
                 <div class="input-fields">
-                    <input type="text" class="input" placeholder="Name">
+                    <input type="bame" class="input" placeholder="Name">
                     <!-- 
                         a tag input define vários types de entrada que
                         podemos ter do usuário, como textos, datas, horas 
                         e alguns outros
                      -->
-                    <input type="text" class="input" placeholder="Email">
-                    <input type="text" class="input" placeholder="Phone">
+                    <input type="email" class="input" placeholder="Email">
+                    <input type="phone" class="input" placeholder="Phone">
                     <input type="text" class="input" placeholder="Subject">
                 </div>
                 <div class="msg">
                     <textarea placeholder="Message"></textarea>
-                    <div class="btn">Send</div>
+                    <div class="btn">Enviar</div>
                 </div>
             </form>
         </section>
