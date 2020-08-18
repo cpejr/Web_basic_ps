@@ -1,3 +1,4 @@
+/* Configurações gerais de estilo */
 *{ /* o "*" significa que é global o que estiver em seu escopo */
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body{
     color: #fff; /*Define a cor das letras*/
     line-height: 1.6; /*Define o espaçamento entre as linhas de texto*/
     height: 100vh; /*Define a altura que o conteúdo ocupa na tela. vh é uma unidade de medida interessante pra se utilizar quando queremos pegar a tela toda*/
+    /* CSS Smooth Scrool */
     overflow: hidden; /*Esconde a barra de scroll lateral, nos eixos x e y*/
 }
 
@@ -64,6 +66,7 @@ section{
     text-align: center;
     width: 100%;
     height: 100%;
+    /* CSS Smooth Scrool */
     scroll-snap-align: center; /*serve para mostrar para a propriedade scroll-snap-type em qual local ele deve fixar a rolagem*/
 }
 
@@ -114,6 +117,7 @@ section#contact {
 
 .smllImg {
     height: 100px;
+    max-width: 100px;
     margin: 10px;
     cursor: pointer; /*muda a forma do cursor ao passar por cima do elemento*/
     border-radius: 10px;
@@ -136,7 +140,7 @@ section#contact {
 
 .service {
     margin: 10px 30px 10px 30px;
-    max-height: 249px;
+    max-height: 247px;
     text-align: justify;
     background: rgba(0,0,0,0.7);;
     padding: 10px;
