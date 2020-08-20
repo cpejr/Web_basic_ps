@@ -1,12 +1,12 @@
 import React from 'react';
 
-function About() {
+function Home() {
   return (
-    <section id="about">
-      <h1>About</h1>
+    <section id="home">
+      <h1>Bem vindo à capacitação Front React!</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, facilis corporis quibusdam nihil sint placeat.</p>
     </section>
   );
 }
 
-export default About;
+export default Home;
