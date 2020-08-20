@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Swal from 'sweetalert2';
+
 function Contact() {
 
   const [name, setName] = useState('');
@@ -16,6 +18,28 @@ function Contact() {
     setMessage('');
   }
 
+  function altHandleSubmit(e) {
+    e.preventDefault();
+    if(name && email && phone && subject && message) {
+      Swal.fire({
+        title: 'Mensagem recebida!',
+        text: `Olá ${name}! Recebemos a sua mensagem sobre ${subject} e retornaremos através do e-mail ${email} ou do telefone ${phone}.
+        Eis a mensagem, caro queira revisá-la:
+        \n'${message}'`,
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+      clearForm();
+    } else {
+      Swal.fire({
+        title: 'Você não preencheu todos os campos!',
+        icon: 'error',
+        confirmButtonText: 'Ok, vou tentar de novo!'
+      })
+    }
+    
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     alert(
@@ -29,7 +53,7 @@ function Contact() {
   return (
     <section id="contact">
       <h1>Contact</h1>
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form className="contact-form" onSubmit={altHandleSubmit}>
         <div className="input-fields">
           <input type="text" className="input" value={name} onChange={e => setName(e.target.value)} placeholder="Name" />
           <input type="text" className="input" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
